@@ -9,7 +9,7 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #ffffff;
+            background-color: #f7f9fa;
             color: #000000;
             display: flex;
             flex-direction: column;
@@ -18,44 +18,68 @@
             min-height: 100vh;
             text-align: center;
         }
-        /* Your signature pink-to-yellow gradient header bar */
+        /* Gradient bar at the top */
         .gradient-bar {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            height: 80px;
+            height: 15px;
             background: linear-gradient(90deg, #ff0055 0%, #ffcc00 100%);
+            z-index: 10;
         }
         .container {
-            max-width: 600px;
+            max-width: 700px;
             padding: 20px;
-            margin-top: 80px;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        p {
-            font-size: 18px;
-            line-height: 1.6;
-            margin-bottom: 30px;
+        /* Custom image styling */
+        .promo-banner {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+            margin-bottom: 25px;
+        }
+        .disclaimer {
+            font-size: 13px;
+            line-height: 1.5;
+            color: #666666;
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #ededed;
+            border-radius: 8px;
+            max-width: 550px;
         }
         .countdown {
             font-weight: bold;
             color: #ff0055;
+            font-size: 18px;
+            margin-bottom: 20px;
         }
         .btn {
             display: inline-block;
             background: linear-gradient(90deg, #ff0055 0%, #ffcc00 100%);
             color: white;
-            padding: 12px 24px;
+            padding: 14px 28px;
             text-decoration: none;
             border-radius: 25px;
             font-weight: bold;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        .btn:active {
+            transform: scale(0.98);
         }
     </style>
     <script>
         // Set your target YouTube Channel URL here
-        const targetUrl = "https://www.youtube.com/@musicallyrevival"; 
-        let secondsLeft = 5;
+        const targetUrl = "YOUR_YOUTUBE_CHANNEL_URL"; 
+        let secondsLeft = 6; // Gave it 6 seconds so they can look at your awesome graphic!
 
         function startCountdown() {
             const timerDisplay = document.getElementById('timer');
@@ -76,11 +100,15 @@
     <div class="gradient-bar"></div>
 
     <div class="container">
-        <p><strong>Disclaimer:</strong> This is an independent, non-profit fan project. We are not affiliated, associated, authorized, endorsed by, or in any way officially connected with Musical.ly Inc., TikTok Inc., ByteDance Ltd., Google LLC., YouTube, or any of their subsidiaries or affiliates. All product and company names are trademarks or registered trademarks of their respective holders. Use of them does not imply any affiliation with or endorsement by them.</p>
+        <img src="musical.ly" alt="Shorts x Musical.ly" class="promo-banner">
         
-        <p>Redirecting you to YouTube Shorts in <span id="timer" class="countdown">5</span> seconds...</p>
+        <p class="countdown">Redirecting you to the channel in <span id="timer">6</span> seconds...</p>
         
-        <a class="btn" href="https://www.youtube.com/@musicallyrevival">Click here if not redirected</a>
+        <a class="btn" href="https://youtube.com/@musicallyrevival">Go to Channel Now</a>
+
+        <div class="disclaimer">
+            <strong>Disclaimer:</strong> This is an independent, non-profit fan project. We are not affiliated, associated, authorized, endorsed by, or in any way officially connected with Musical.ly Inc., TikTok Inc., ByteDance Ltd., Google LLC., YouTube, or any of their subsidiaries or affiliates. All product and company names are trademarks or registered trademarks of their respective holders.
+        </div>
     </div>
 
 </body>
