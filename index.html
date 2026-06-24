@@ -3,113 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Musical.ly Shorts Revival</title>
+    <title>Shorts X Musical.ly</title>
+    
+    <meta property="og:title" content="Shorts X Musical.ly Revival">
+    <meta property="og:description" content="Check out the website and join the revival project!">
+    <meta property="og:image" content="https://musicallyrevival.github.io/musically-shorts/8B04A83C-9B11-46F2-803B-394EFB482381.jpeg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://musicallyrevival.github.io/musically-shorts/">
+
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f7f9fa;
-            color: #000000;
+            background-color: #f7f9fa; /* Clean, neutral background color */
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            text-align: center;
         }
-        /* Gradient bar at the top */
-        .gradient-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 15px;
-            background: linear-gradient(90deg, #ff0055 0%, #ffcc00 100%);
-            z-index: 10;
-        }
-        .container {
-            max-width: 700px;
-            padding: 20px;
-            margin-top: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        /* Custom image styling */
+        /* Styles your image to look perfect on mobile or desktop screens */
         .promo-banner {
             width: 100%;
-            max-width: 600px;
+            max-width: 600px; /* Prevents it from stretching too big on computer screens */
             height: auto;
-            border-radius: 12px;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-            margin-bottom: 25px;
-        }
-        .disclaimer {
-            font-size: 13px;
-            line-height: 1.5;
-            color: #666666;
-            margin-top: 30px;
+            display: block;
             padding: 15px;
-            background-color: #ededed;
-            border-radius: 8px;
-            max-width: 550px;
-        }
-        .countdown {
-            font-weight: bold;
-            color: #ff0055;
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
-        .btn {
-            display: inline-block;
-            background: linear-gradient(90deg, #ff0055 0%, #ffcc00 100%);
-            color: white;
-            padding: 14px 28px;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: bold;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.2s;
-        }
-        .btn:active {
-            transform: scale(0.98);
+            box-sizing: border-box;
         }
     </style>
-    <script>
-        // Set your target YouTube Channel URL here
-        const targetUrl = "https://youtube.com/@musicallyrevival"; 
-        let secondsLeft = 6; // Gave it 6 seconds so they can look at your awesome graphic!
-
-        function startCountdown() {
-            const timerDisplay = document.getElementById('timer');
-            const interval = setInterval(() => {
-                secondsLeft--;
-                timerDisplay.textContent = secondsLeft;
-                if (secondsLeft <= 0) {
-                    clearInterval(interval);
-                    window.location.href = targetUrl;
-                }
-            }, 1000);
-        }
-        window.onload = startCountdown;
-    </script>
 </head>
 <body>
 
-    <div class="gradient-bar"></div>
-
-    <div class="container">
-        <img src="8B04A83C-9B11-46F2-803B-394EFB482381.jpeg" alt="Shorts x Musical.ly" class="promo-banner">
-        
-        <p class="countdown">Redirecting you to the channel in <span id="timer">6</span> seconds...</p>
-        
-        <a class="btn" href="https://youtube.com/@musicallyrevival">Go to Channel Now</a>
-
-        <div class="disclaimer">
-            <strong>Disclaimer:</strong> This is an independent, non-profit fan project. We are not affiliated, associated, authorized, endorsed by, or in any way officially connected with Musical.ly Inc., TikTok Inc., ByteDance Ltd., Google LLC., YouTube, or any of their subsidiaries or affiliates. All product and company names are trademarks or registered trademarks of their respective holders.
-        </div>
-    </div>
+    <img src="8B04A83C-9B11-46F2-803B-394EFB482381.jpeg" alt="Shorts x Musical.ly" class="promo-banner">
 
 </body>
 </html>
